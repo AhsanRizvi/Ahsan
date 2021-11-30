@@ -9,6 +9,6 @@
         $table = $result->fetch_assoc();
         echo json_encode($table);
     }else{
-        echo "Data not found";
+        echo "Da not found";
     }
 ?>
