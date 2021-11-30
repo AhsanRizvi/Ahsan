@@ -9,6 +9,6 @@
         $table = $result->fetch_assoc();
         echo json_encode($table);
     }else{
-        echo "Da not found";
+        echo "Dadxgsdg not found";
     }
 ?>
