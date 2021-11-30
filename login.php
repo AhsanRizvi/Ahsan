@@ -1,0 +1,49 @@
+<?php
+	include("connection.php");
+	error_reporting(0);
+?>
+
+<html>
+<head>
+<title> Login and Registration form design </title>
+	<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+	<div class="login-page">
+	<div class="form">
+		<form class="reg-form">
+		<input type="text" name="u_name" placeholder="Enter a User Name"/>
+		<input type="text" name="password" placeholder="Enter a Password"/>
+		<input type="text" name="emailid" placeholder="Enter your Email ID"/>
+		<button><centre>Create</centre></button>
+		<p class="message"> Already Registered? <a href="#"> Log in</a> </p>
+		</form>
+		
+		<form class="login-form">
+		<input type="text" name="u_name" placeholder="User Name"/>
+		<input type="text" name="password" placeholder="Password"/>
+		<button> Login</button>
+		<p class="message"> Not Registered? <a href="#"> Register</a> </p>
+	</div>
+	</div>
+
+	<script src='https://code.jquery.com/jquery-3.2.1.min.js'> </script>
+	<script>
+	$('.message a').click(function(){
+	$('form').animate({height: "toggle", opacity:"toggle"}, "slow");
+	});
+	</script>
+
+
+</body>
+</html>
+
+<?php
+
+$username=$_GET['u_name'];
+$password=$_GET['password'];
+$emailid=$_GET['emailid'];
+
+$query="INSERT INTO register VALUES ('$u_name','$password','$datePlanning')";
+$data=mysqli_query($conn,$query);
+?>	
