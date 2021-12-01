@@ -1,13 +1,16 @@
 <div class="wrapper">
     <header>Line Handovering</header>
     <form id='line_ho' name='line_ho' action="#">
-        <div class="dbl-field">
+        <div class="dbl-field1">
             <div class="field">
                 <input type="text" name="schedule" placeholder="Schedule"> <i class="fas fa-puzzle-piece"></i>
             </div>
             <div class="field">
                 <input type="number" min="1" max="72" name="team" placeholder="Team (Module)"> <i
                     class='fas fa-users'></i>
+            </div>
+            <div class="button-area">
+                <button type="button" onclick="find_line_ho()">Find</button> <span></span>
             </div>
         </div>
 
@@ -56,7 +59,7 @@
         <div class="message">
             <textarea placeholder="Remark (Line handovering)" name="remark_LHO"></textarea> <i
                 class="material-icons"></i>
-        </div>
+        </div><br>
         <div class="button-area">
             <button type="button" onclick="submit_line_ho()">Save</button> <span></span>
         </div> <br>
