@@ -1,13 +1,16 @@
 <div class="wrapper">
     <header>IE (70% Acheivement)</header>
     <form id='ie' name='ie' action="#">
-        <div class="dbl-field">
+        <div class="dbl-field1">
             <div class="field">
                 <input type="text" name="schedule" placeholder="Schedule"> <i class="fas fa-puzzle-piece"></i>
             </div>
             <div class="field">
                 <input type="number" min="1" max="72" name="team" placeholder="Team (Module)"> <i
                     class='fas fa-users'></i>
+            </div>
+            <div class="button-area">
+                <button type="button" onclick="find_ie()">Find</button> <span></span>
             </div>
         </div>
 
