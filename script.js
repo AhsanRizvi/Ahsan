@@ -123,3 +123,24 @@ submit_ie = () => {
   xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xmlhttp.send(queryString);
 };
+
+form_fill = () => {
+  let schedule = document.getElementById("key_schedule").value;
+  let team = document.getElementById("key_team").value;
+
+  let queryString = "schedule=" + schedule + "&team=" + team;
+
+  // ajax request
+  let xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      // let data = JSON.parse(this.responseText);
+      alert(this.responseText);
+      // document.getElementById("key_schedule").value = data.schedule;
+    }
+  };
+
+  xmlhttp.open("POST", "fetch.php", true);
+  xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xmlhttp.send(queryString);
+};

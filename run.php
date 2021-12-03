@@ -137,13 +137,13 @@
         if($_POST['flag'] == 'feeding'){
         if(isset($_POST['schedule']) && isset($_POST['team']) 
         && isset($_POST['feeding_start_date']) && isset($_POST['feeding_start_time']) 
-        // && isset($_POST['mcr1']) && isset($_POST['mcr1_mech']) && isset($_POST['mcr1_time']) && isset($_POST['mcr1_tech']) && isset($_POST['mcr1_tech_mins']) 
-        // && isset($_POST['mcr2']) && isset($_POST['mcr2_mech']) && isset($_POST['mcr2_time']) && isset($_POST['mcr2_tech']) && isset($_POST['mcr2_tech_mins']) 
-        // && isset($_POST['mcr3']) && isset($_POST['mcr3_mech']) && isset($_POST['mcr3_time']) && isset($_POST['mcr3_tech']) && isset($_POST['mcr3_tech_mins']) 
-        // && isset($_POST['mcr4']) && isset($_POST['mcr4_mech']) && isset($_POST['mcr4_time']) && isset($_POST['mcr4_tech']) && isset($_POST['mcr4_tech_mins']) 
-        // && isset($_POST['mcr5']) && isset($_POST['mcr5_mech']) && isset($_POST['mcr5_time']) && isset($_POST['mcr5_tech']) && isset($_POST['mcr5_tech_mins'])
-        // && isset($_POST['feeding_end_date']) && isset($_POST['feeding_end_time']) && isset($_POST['feeding_mach_eng']) 
-        // && isset($_POST['feeding_tech_eng'])
+        && isset($_POST['mcr1']) && isset($_POST['mcr1_mech']) && isset($_POST['mcr1_time']) && isset($_POST['mcr1_tech']) && isset($_POST['mcr1_tech_mins']) 
+        && isset($_POST['mcr2']) && isset($_POST['mcr2_mech']) && isset($_POST['mcr2_time']) && isset($_POST['mcr2_tech']) && isset($_POST['mcr2_tech_mins']) 
+        && isset($_POST['mcr3']) && isset($_POST['mcr3_mech']) && isset($_POST['mcr3_time']) && isset($_POST['mcr3_tech']) && isset($_POST['mcr3_tech_mins']) 
+        && isset($_POST['mcr4']) && isset($_POST['mcr4_mech']) && isset($_POST['mcr4_time']) && isset($_POST['mcr4_tech']) && isset($_POST['mcr4_tech_mins']) 
+        && isset($_POST['mcr5']) && isset($_POST['mcr5_mech']) && isset($_POST['mcr5_time']) && isset($_POST['mcr5_tech']) && isset($_POST['mcr5_tech_mins'])
+        && isset($_POST['feeding_end_date']) && isset($_POST['feeding_end_time']) && isset($_POST['feeding_mach_eng']) 
+        && isset($_POST['feeding_tech_eng'])
         ){
         
         $schedule = $_POST['schedule']; 
@@ -182,10 +182,10 @@
         
        
         
-        $sql = "INSERT INTO imcs VALUES(?,?)" ;
+        $sql = "INSERT INTO feeding VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
 
         $stmt = $con->prepare($sql);
-        $stmt->bind_param("si", 
+        $stmt->bind_param("sisissisissisissisissisissisissss", 
         $schedule,$team,
         $feeding_start_date, $feeding_start_time, 
         $mcr1, $mcr1_mech, $mcr1_time, $mcr1_tech, $mcr1_tech_mins,

@@ -3,14 +3,15 @@
     <form id='line_ho' name='line_ho' action="#">
         <div class="dbl-field1">
             <div class="field">
-                <input type="text" name="schedule" placeholder="Schedule"> <i class="fas fa-puzzle-piece"></i>
+                <input type="text" id="key_schedule" name="schedule" placeholder="Schedule"> <i
+                    class="fas fa-puzzle-piece"></i>
             </div>
             <div class="field">
-                <input type="number" min="1" max="72" name="team" placeholder="Team (Module)"> <i
+                <input type="number" id="key_team" min="1" max="72" name="team" placeholder="Team (Module)"> <i
                     class='fas fa-users'></i>
             </div>
             <div class="button-area">
-                <button type="button" onclick="find_line_ho()">Find</button> <span></span>
+                <button type="button" onclick="form_fill()">Find</button> <span></span>
             </div>
         </div>
 
